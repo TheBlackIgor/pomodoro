@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./script/script.js" defer></script>
+    <script src="./script/range.js" defer></script>
+    <script src="./script/pomodoro.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Sekcja navigacyjna -->
+    <nav>
+        <div class="menuObj picked" id="pomodoro">POMODORO</div>
+        <div class="menuObj" id="settings">SETTINGS</div>
+    </nav>
+    <!-- zegar oraz list -->
+    <div class="clockContainer" id="clockContainer">
+        <div class="clock" id="clock">
+            <div class="firstRow">
+                <div>
+                    <a href="/settings"><i class="fa-solid fa-gear"></i></a>
+                </div>
+                <div>Pomodoro nr <span id="pomodoroNr">1</span></div>
+            </div>
+            <div class="timer" id="timer">
+                00 : 00 : 00
+            </div>
+            <div class="description">
+                <p>ABOUT: <span id="taskDesc">Opis zadania</span> | CATEGORY: <span id="taskCat">kategoria</span></p>
+            </div>
+            <div class="buttons">
+                <button class="pomodoroBt anim" id="start">START</button>
+                <button class="pomodoroBt anim" id="pause">PAUSE</button>
+                <button class="pomodoroBt anim" id="reset">RESET</button>
+            </div>
+        </div>
+        <div class="addTask">
+            <input type="text" id="newTaskName" placeholder="New task">
+            <input type="text" id="newTaskCategory">
+            <button id="addTask">Add</button>
+        </div>
+        <div class="tasksList">
+            <h4>POMODORO TODO LIST HISTORY</h4>
+            <div class="list">
+
+            </div>
+        </div>
+    </div>
+    <!-- Ustawienia -->
+    <div class="settings hide" id="settingsContainer">
+        <div class="mainSettings">
+            <div class="autoSwitchs">
+                <div>Auto-break:</div>
+                <label class="switch">
+                    <input id="autoBreak" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <div>Auto pomodoros: </div>
+                <label class="switch">
+                    <input id="autoPomodoro" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="listOfSettings">
+                <div>
+                    <div>Duration</div>
+                    <input type="number" min="1" value="25" id="duration">
+                </div>
+                <div>
+                    <div>Short break</div>
+                    <input type="number" min="1" value="5" id="shortBreak">
+                </div>
+                <div>
+                    <div>Long break</div>
+                    <input type="number" min="1" value="10" id="longBreak">
+                </div>
+                <div>
+                    <div>After</div>
+                    <input type="number" min="1" value="4" id="after">
+                </div>
+                <div>
+                    <div>Daily goal</div>
+                    <input type="number" min="1" value="5" id="dailyGoal">
+                </div>
+            </div>
+            <div class="scenarios">
+                <button id="sc1" class="settingsBt anim">Scenario One</button>
+                <button id="sc2" class="settingsBt anim">Scenario Two</button>
+                <button id="sc3" class="settingsBt anim">Scenario Three</button>
+            </div>
+            <div class="lastRow">
+                <input type="text" placeholder="25,5,10,4,5">
+                <button class="settingsBt anim" id="apply">Apply</button>
+            </div>
+        </div>
+        <div class="mainSettings">
+            <div class="listOfSettings">
+                <div>
+                    <div>Alarm sound</div>
+                    <input type="file" class="file">
+                </div>
+                <div>
+                    <div>Alarm volume</div>
+                    <input type="range" value="70" min="0" max="100" id="range" />
+                </div>
+            </div>
+        </div>
+        <div class="mainSettings">
+            <div class="autoSwitchs">
+                <div>Dark Mode:</div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

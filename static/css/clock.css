@@ -1,0 +1,59 @@
+.clockContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 1s ease;
+}
+.clock{
+    margin: 50px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+}
+.firstRow{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.settingsIcon{
+    width: 20px;
+}
+
+.timer{
+    font-size: 80px;
+    margin: 10px;
+}
+.description{
+    font-size: 20px;
+}
+.description span{
+    color: black;
+}
+
+.buttons{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+.pomodoroBt{
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 2px solid var(--compText);
+    background-color: rgba(255, 0, 0, 0);
+    font-weight: 600;
+    color: var(--compText);
+    cursor: pointer;
+}
+
+.pomodoroBt:hover{
+    background-color: var(--compText);
+    color: red;
+}
