@@ -55,5 +55,10 @@ module.exports = {
         })
 
     },
+    DeleteById: function (ObjectID, collection, id) {
+        collection.remove({ _id: ObjectID(id) }, function (err, data) {
+            console.log(data)
+        })
+    },
 
 }

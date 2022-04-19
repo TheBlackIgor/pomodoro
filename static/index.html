@@ -10,6 +10,7 @@
     <script src="./script/script.js" defer></script>
     <script src="./script/range.js" defer></script>
     <script src="./script/pomodoro.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
 </head>
 
 <body>
@@ -26,7 +27,7 @@
                 <div>
                     <a href="/settings"><i class="fa-solid fa-gear"></i></a>
                 </div>
-                <div>Pomodoro nr <span id="pomodoroNr">1</span></div>
+                <div>Pomodoro nr <span id="pomodoroNr"></span></div>
             </div>
             <div class="timer" id="timer">
                 00 : 00 : 00
@@ -45,10 +46,18 @@
             <input type="text" id="newTaskCategory">
             <button id="addTask">Add</button>
         </div>
-        <div class="tasksList">
-            <h4>POMODORO TODO LIST HISTORY</h4>
-            <div class="list">
+        <div class="contLists">
+            <div class="tasksList">
+                <h4 class="listHeader">POMODORO TODO LIST</h4>
+                <div id="list" class="list">
 
+                </div>
+            </div>
+            <div class="tasksHistoryList">
+                <h4 class="listHeader">POMODORO HISTORY LIST</h4>
+                <div id="historyList" class="list">
+
+                </div>
             </div>
         </div>
     </div>
@@ -95,7 +104,7 @@
                 <button id="sc3" class="settingsBt anim">Scenario Three</button>
             </div>
             <div class="lastRow">
-                <input type="text" placeholder="25,5,10,4,5">
+                <input type="text" id="settingInp" placeholder="25,5,10,4,5" pattern="[0-9]+">
                 <button class="settingsBt anim" id="apply">Apply</button>
             </div>
         </div>
@@ -103,7 +112,8 @@
             <div class="listOfSettings">
                 <div>
                     <div>Alarm sound</div>
-                    <input type="file" class="file">
+                    <input type="file" class="file" id="songs" multiple>
+                    <audio controls id="myAudio" autoplay class="audioControll"></audio>
                 </div>
                 <div>
                     <div>Alarm volume</div>
@@ -115,12 +125,17 @@
             <div class="autoSwitchs">
                 <div>Dark Mode:</div>
                 <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" id="themeSwitch">
                     <span class="slider round"></span>
                 </label>
             </div>
         </div>
     </div>
+
+
+    <script>
+
+    </script>
 </body>
 
 </html>

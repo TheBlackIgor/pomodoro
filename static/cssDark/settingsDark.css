@@ -1,0 +1,66 @@
+.settings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mainSettings{
+    width: 400px;
+    background-color: var(--compBg);
+    color: var(--compText);
+    padding: 30px;
+    border-radius: 20px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.autoSwitchs{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.listOfSettings{
+    margin: 20px 0;
+}
+.listOfSettings div{
+    display: flex;
+    justify-content: space-between;
+}
+.listOfSettings div input{
+    text-align: center;
+}
+.scenarios{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.lastRow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lastRow input{
+    width: 150px;
+    text-align: center;
+    padding: 1px;
+    height: 16px;
+}
+.settingsBt{
+    padding: 10px;
+    border-radius: 10px;
+    border: solid var(--compText) 2px;
+    background-color: rgba(240, 248, 255, 0);
+    color: var(--compText);
+    cursor: pointer;
+}
+.settingsBt:hover{
+    background-color: var(--compText);
+    color: var(--compBg);
+}
+
+.file{
+    margin-bottom: 20px;
+    width: 250px;
+}

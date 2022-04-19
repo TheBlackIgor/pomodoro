@@ -1,9 +1,9 @@
-@import url("./clock.css");
-@import url("./lowerContent.css");
-@import url("./switch.css");
-@import url("./settings.css");
-@import url("./root.css");
-@import url("./range.css");
+@import url("./clockDark.css");
+@import url("./lowerContentDark.css");
+@import url("./switchDark.css");
+@import url("./settingsDark.css");
+@import url("./rootDark.css");
+@import url("./rangeDark.css");
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +12,7 @@
 body {
   display: flex;
   flex-direction: column;
+  background-color: black;
 }
 
 nav {
@@ -32,7 +33,7 @@ nav div {
   font-size: 30px;
   letter-spacing: 4px;
   color: rgb(78, 78, 255);
-  background-color: white;
+  background-color: lightgray;
   font-weight: 500;
   border-radius: 20px;
   transition: all ease 1s;
@@ -47,4 +48,8 @@ nav div {
 }
 .anim {
   transition: all ease 0.8s;
+}
+
+.listHeader {
+  color: white;
 }
